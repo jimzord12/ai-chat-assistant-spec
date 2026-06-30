@@ -41,7 +41,19 @@ Chapter files live in the [`chapters/`](./chapters/) directory.
 
 ---
 
-## Step 4: Context for Claude
+## Step 4: Reference Materials
+
+Third-party SDK guides and external documentation live in [`docs/references/`](./docs/references/).
+
+Check the [`docs/references/README.md`](./docs/references/README.md) index before making any decisions that involve external SDKs or libraries. Currently available:
+
+| File | Topic | Relevant Chapters |
+|------|-------|-------------------|
+| [`vercel-ai-sdk-v7-chatbot-crash-course.md`](./docs/references/vercel-ai-sdk-v7-chatbot-crash-course.md) | Vercel AI SDK v7 | Ch 03, Ch 04 |
+
+---
+
+## Step 5: Context for Claude
 
 If you are Claude, also read [`CLAUDE.md`](./CLAUDE.md) — it contains model-specific behavioral instructions for this project.
 
