@@ -54,3 +54,12 @@ If you are Claude, also read [`CLAUDE.md`](./CLAUDE.md) — it contains model-sp
 - **Never modify a LOCKED chapter** without following the Unlock Process defined in `SPEC_PROTOCOL.md §1 Stage 5`.
 - **Always update `SPEC_STATE.md` at the end of every session.** If it's not updated, the session didn't happen.
 - **Follow the Next-Action Decision Tree** in `SPEC_PROTOCOL.md §3` — do not freelance the next step.
+
+---
+
+## Grilling Session Interaction Rules
+
+- **Always ask questions one at a time.** Never present multiple questions at once and wait for a bulk answer.
+- Ask Q1, wait for the user's answer, record it, then ask Q2 — and so on.
+- This applies to ALL grilling sessions across ALL chapters, without exception.
+- The user drives the pace. Do not rush or batch questions to save turns.
