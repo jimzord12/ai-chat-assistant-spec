@@ -2,7 +2,7 @@
 
 > **Last Updated:** 2026-06-30
 > **Spec Book Status:** IN PROGRESS
-> **Chapters Locked:** 0 / 12
+> **Chapters Locked:** 1 / 12
 
 ---
 
@@ -10,13 +10,13 @@
 
 | Field | Value |
 |------|-------|
-| **Active Chapter** | Ch 01: Overview & NFRs |
-| **Chapter Stage** | SCOPED |
+| **Active Chapter** | Ch 02: Architecture & Topology |
+| **Chapter Stage** | NOT STARTED |
 | **Decisions Resolved** | 8 / ~150-200 (estimated) |
-| **Open Questions** | 0 remaining in Ch 01 |
+| **Open Questions** | — |
 | **Last Session** | 2026-06-30 |
-| **Last Session Summary** | Completed scoping session for Ch 01. All 8 questions answered (D-001 to D-008). Chapter is SCOPED with 0 open questions. Ready for grilling session to fill out decision details and then move to IN PROGRESS. |
-| **Next Recommended Action** | Start Grilling Session on Ch 01 — all decisions are resolved at scope level, now flesh out implementation contracts, acceptance criteria, and agent instructions in detail. Then advance to COMPLETE → REVIEWED → LOCKED. |
+| **Last Session Summary** | Ch 01 passed self-review and locked. All 8 decisions confirmed clean. 4 cross-chapter impacts queued. Ch 02 is now unblocked. |
+| **Next Recommended Action** | Create Ch 02: Architecture & Topology — Ch 01 is LOCKED, dependency satisfied. Scope Ch 02 (8-12 questions). |
 | **Blocked Items** | None |
 
 ---
@@ -25,8 +25,8 @@
 
 | Chapter | Stage | Decisions (resolved/est) | Open Q's | Depends On | Blocks | Last Touched |
 |---------|-------|--------------------------|----------|------------|--------|--------------|
-| Ch 01: Overview & NFRs | SCOPED | 8 / 8 | 0 | — | Ch 02 | 2026-06-30 |
-| Ch 02: Architecture & Topology | NOT STARTED | 0 / 8-12 | — | Ch 01 | Ch 00 | — |
+| Ch 01: Overview & NFRs | **LOCKED** | 8 / 8 | 0 | — | Ch 02 | 2026-06-30 |
+| Ch 02: Architecture & Topology | NOT STARTED | 0 / 8-12 | — | Ch 01 ✅ | Ch 00 | — |
 | Ch 00: Agent Conventions & Shared Contract | NOT STARTED | 0 / 15-25 | — | Ch 02 | Ch 06, Ch 05 | — |
 | Ch 06: Config & Extensibility | NOT STARTED | 0 / 12-18 | — | Ch 00 | Ch 05, Ch 04 | — |
 | Ch 05: Data Layer & Storage | NOT STARTED | 0 / 15-20 | — | Ch 00, Ch 06 | Ch 04 | — |
@@ -57,6 +57,7 @@
 |---|------|---------|-------------|--------------------|---------|
 | 1 | 2026-06-30 | — | Protocol Setup | 0 | Established spec protocol, dependency graph, write order, chapter template, and state file. Repo pushed to GitHub. |
 | 2 | 2026-06-30 | Ch 01 | Scoping | 8 | All 8 scoping questions answered. D-001 to D-008 created. Chapter advanced to SCOPED. |
+| 3 | 2026-06-30 | Ch 01 | Review + Lock | 8 | Self-review checklist passed. Chapter fast-tracked SCOPED → LOCKED. 4 cross-chapter impacts queued. |
 
 ---
 

@@ -1,11 +1,11 @@
 # Chapter 01: Overview & NFRs
 
-> **Status:** SCOPED
+> **Status:** LOCKED
 > **Primary Consumer:** Both Teams
 > **Dependencies:** None
 > **Dependents:** Ch 02: Architecture & Topology
-> **Sessions Contributed:** 1
-> **Questions Resolved:** 0 / 8
+> **Sessions Contributed:** 2
+> **Questions Resolved:** 8 / 8
 
 ---
 
@@ -279,3 +279,4 @@ How many bots can run per installation?
 | Session # | Date | Questions Resolved | Decisions Added | Notes |
 |-----------|------|--------------------|-----------------|-------|
 | 1 | 2026-06-30 | 8 / 8 | D-001 to D-008 | Scoping session. All 8 questions answered. Chapter moved to SCOPED. |
+| 2 | 2026-06-30 | 8 / 8 | — | Self-review passed. All checklist items green. Chapter advanced SCOPED → IN PROGRESS → COMPLETE → REVIEWED → LOCKED. |
