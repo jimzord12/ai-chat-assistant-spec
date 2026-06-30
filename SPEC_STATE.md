@@ -2,7 +2,7 @@
 
 > **Last Updated:** 2026-06-30
 > **Spec Book Status:** IN PROGRESS
-> **Chapters Locked:** 1 / 12
+> **Chapters Locked:** 2 / 12
 
 ---
 
@@ -10,13 +10,13 @@
 
 | Field | Value |
 |------|-------|
-| **Active Chapter** | Ch 02: Architecture & Topology |
+| **Active Chapter** | Ch 00: Agent Conventions & Shared Contract |
 | **Chapter Stage** | NOT STARTED |
-| **Decisions Resolved** | 8 / ~150-200 (estimated) |
+| **Decisions Resolved** | 16 / ~150-200 (estimated) |
 | **Open Questions** | — |
 | **Last Session** | 2026-06-30 |
-| **Last Session Summary** | Ch 01 passed self-review and locked. All 8 decisions confirmed clean. 4 cross-chapter impacts queued. Ch 02 is now unblocked. |
-| **Next Recommended Action** | Create Ch 02: Architecture & Topology — Ch 01 is LOCKED, dependency satisfied. Scope Ch 02 (8-12 questions). |
+| **Last Session Summary** | Ch 02 scoped, self-reviewed, and locked in one session (D-009 to D-016). 5 cross-chapter impacts queued. Ch 00 is now unblocked. |
+| **Next Recommended Action** | Scope Ch 00: Agent Conventions & Shared Contract — both Ch 01 and Ch 02 are LOCKED, dependency satisfied. |
 | **Blocked Items** | None |
 
 ---
@@ -26,8 +26,8 @@
 | Chapter | Stage | Decisions (resolved/est) | Open Q's | Depends On | Blocks | Last Touched |
 |---------|-------|--------------------------|----------|------------|--------|--------------|
 | Ch 01: Overview & NFRs | **LOCKED** | 8 / 8 | 0 | — | Ch 02 | 2026-06-30 |
-| Ch 02: Architecture & Topology | NOT STARTED | 0 / 8-12 | — | Ch 01 ✅ | Ch 00 | — |
-| Ch 00: Agent Conventions & Shared Contract | NOT STARTED | 0 / 15-25 | — | Ch 02 | Ch 06, Ch 05 | — |
+| Ch 02: Architecture & Topology | **LOCKED** | 8 / 8 | 0 | Ch 01 ✅ | Ch 00 | 2026-06-30 |
+| Ch 00: Agent Conventions & Shared Contract | NOT STARTED | 0 / 15-25 | — | Ch 02 ✅ | Ch 06, Ch 05 | — |
 | Ch 06: Config & Extensibility | NOT STARTED | 0 / 12-18 | — | Ch 00 | Ch 05, Ch 04 | — |
 | Ch 05: Data Layer & Storage | NOT STARTED | 0 / 15-20 | — | Ch 00, Ch 06 | Ch 04 | — |
 | Ch 04: Backend: API & Streaming | NOT STARTED | 0 / 18-25 | — | Ch 06, Ch 05 | Ch 07, Ch 08, Ch 03, Ch 10 | — |
@@ -48,6 +48,11 @@
 | IMP-002 | Ch 01 (D-003) | Ch 04 | Backend must implement Vercel AI SDK v7 streaming contract | Pending |
 | IMP-003 | Ch 01 (D-006) | Ch 07 | Auth is host-app responsibility; component receives userId prop only | Pending |
 | IMP-004 | Ch 01 (D-008) | Ch 06 | Single config per instance; no internal persona routing needed | Pending |
+| IMP-005 | Ch 02 (D-009) | Ch 00 | Monorepo structure defines folder conventions and import paths | Pending |
+| IMP-006 | Ch 02 (D-010) | Ch 00, Ch 03 | Package names define all import statements across the spec | Pending |
+| IMP-007 | Ch 02 (D-011) | Ch 03 | Headless + styled pattern defines component API surface | Pending |
+| IMP-008 | Ch 02 (D-013) | Ch 00 | ESM-only output constrains all import/export conventions | Pending |
+| IMP-009 | Ch 02 (D-016) | Ch 04 | Example app API route is the canonical backend contract reference | Pending |
 
 ---
 
@@ -58,6 +63,7 @@
 | 1 | 2026-06-30 | — | Protocol Setup | 0 | Established spec protocol, dependency graph, write order, chapter template, and state file. Repo pushed to GitHub. |
 | 2 | 2026-06-30 | Ch 01 | Scoping | 8 | All 8 scoping questions answered. D-001 to D-008 created. Chapter advanced to SCOPED. |
 | 3 | 2026-06-30 | Ch 01 | Review + Lock | 8 | Self-review checklist passed. Chapter fast-tracked SCOPED → LOCKED. 4 cross-chapter impacts queued. |
+| 4 | 2026-06-30 | Ch 02 | Scoping + Lock | 8 | All 8 questions answered (D-009 to D-016). Self-review passed. Chapter fast-tracked to LOCKED. 5 impacts queued. |
 
 ---
 
