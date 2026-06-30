@@ -49,7 +49,8 @@ Check the [`docs/references/README.md`](./docs/references/README.md) index befor
 
 | File | Topic | Relevant Chapters |
 |------|-------|-------------------|
-| [`vercel-ai-sdk-v7-chatbot-crash-course.md`](./docs/references/vercel-ai-sdk-v7-chatbot-crash-course.md) | Vercel AI SDK v7 | Ch 03, Ch 04 |
+| [`vercel-ai-sdk-v7-chatbot-crash-course.md`](./docs/references/vercel-ai-sdk-v7-chatbot-crash-course.md) | Vercel AI SDK v7 — core patterns | Ch 03, Ch 04 |
+| [`gemini-vercel-chatbot-context-management.md`](./docs/references/gemini-vercel-chatbot-context-management.md) | Gemini + Vercel AI SDK v7 — context management (no RAG) | Ch 04, Ch 08 |
 
 ---
 
