@@ -31,6 +31,20 @@ It tells you:
 
 ---
 
+## Step 2.5: Check for Session Handoff
+
+**If [`SESSION_HANDOFF.md`](./SESSION_HANDOFF.md) exists in the repo root, read it immediately after `SPEC_STATE.md`.**
+
+It contains:
+- A summary of the last session and exactly where work stopped
+- All key product decisions condensed in one place
+- The owner's behavioural preferences for this specific project
+- The exact first action to take when resuming
+
+> Once the chapter targeted in the handoff file is LOCKED, delete `SESSION_HANDOFF.md` and do not recreate it until the next end-of-session wrap-up.
+
+---
+
 ## Step 3: Understand the Structure
 
 Read [`MASTER_INDEX.md`](./MASTER_INDEX.md) for the full chapter list, dependency graph, and write order.
