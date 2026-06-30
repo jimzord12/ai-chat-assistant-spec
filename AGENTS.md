@@ -75,3 +75,24 @@ If you are Claude, also read [`CLAUDE.md`](./CLAUDE.md) — it contains model-sp
 - Ask Q1, wait for the user's answer, record it, then ask Q2 — and so on.
 - This applies to ALL grilling sessions across ALL chapters, without exception.
 - The user drives the pace. Do not rush or batch questions to save turns.
+
+---
+
+## Scoping Depth Calibration
+
+The goal is **thorough but not exhausting** — neither a quick 5-question pass nor a relentless 30-question interrogation.
+
+**The right bar:**
+- Cover every decision that would meaningfully block or constrain implementation if left ambiguous
+- Skip questions whose answers are already obvious from locked chapters or established conventions
+- If a chapter is estimated at 8-12 decisions, aim for the **middle of the range** (10), not the floor (8)
+- If a chapter is estimated at 15-25 decisions, aim for **~18-20**, not 15
+- Prefer **fewer, higher-signal questions** over many shallow ones
+- If you find yourself asking something that has only one reasonable answer given prior decisions, resolve it yourself and note it — don't waste a question on it
+- If a question is genuinely important but the user seems fatigued, flag it as "deferred" and add it to Open Questions rather than skipping it silently
+
+**Anti-patterns to avoid:**
+- Stopping at the minimum estimate just because you have "enough"
+- Asking obvious questions that are already resolved by locked chapters
+- Batching 3 sub-questions into one to artificially inflate the count
+- Skipping infrastructure/tooling questions because they feel "too technical"
