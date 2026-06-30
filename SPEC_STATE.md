@@ -1,6 +1,6 @@
 # SPEC STATE
 
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-01
 > **Spec Book Status:** IN PROGRESS
 > **Chapters Locked:** 3 / 12
 
@@ -14,8 +14,8 @@
 | **Chapter Stage** | NOT STARTED |
 | **Decisions Resolved** | 41 / ~150-200 (estimated) |
 | **Open Questions** | — |
-| **Last Session** | 2026-06-30 |
-| **Last Session Summary** | Ch 00 fully scoped and locked in one pass (D-022 to D-041). 20 decisions covering type structure, error shape, Result pattern, naming conventions, import rules, and all shared type shapes. |
+| **Last Session** | 2026-07-01 (session ended ~00:12 EEST) |
+| **Last Session Summary** | Ch 00 fully scoped and locked in one pass (D-022 to D-041). 20 decisions covering type structure, error shape, Result pattern, naming conventions, import rules, and all shared type shapes. End-of-session wrap-up committed. |
 | **Next Recommended Action** | Scope Ch 06: Config & Extensibility — Ch 00 now LOCKED. Target ~15 questions per calibration rules. |
 | **Blocked Items** | None |
 
@@ -27,7 +27,7 @@
 |---------|-------|--------------------------|----------|------------|--------|--------------|
 | Ch 01: Overview & NFRs | **LOCKED** | 8 / 8 | 0 | — | Ch 02 | 2026-06-30 |
 | Ch 02: Architecture & Topology | **LOCKED** | 13 / 13 | 0 | Ch 01 ✅ | Ch 00 | 2026-06-30 |
-| Ch 00: Agent Conventions & Shared Contract | **LOCKED** | 20 / 20 | 0 | Ch 02 ✅ | Ch 06, Ch 05 | 2026-06-30 |
+| Ch 00: Agent Conventions & Shared Contract | **LOCKED** | 20 / 20 | 0 | Ch 02 ✅ | Ch 06, Ch 05 | 2026-07-01 |
 | Ch 06: Config & Extensibility | NOT STARTED | 0 / 12-18 | — | Ch 00 ✅ | Ch 05, Ch 04 | — |
 | Ch 05: Data Layer & Storage | NOT STARTED | 0 / 15-20 | — | Ch 00 ✅, Ch 06 | Ch 04 | — |
 | Ch 04: Backend: API & Streaming | NOT STARTED | 0 / 18-25 | — | Ch 06, Ch 05 | Ch 07, Ch 08, Ch 03, Ch 10 | — |
@@ -61,7 +61,7 @@
 | IMP-015 | Ch 00 (D-034) | Ch 05, Ch 06 | KnowledgeEntry shape drives storage and config decisions | Pending |
 | IMP-016 | Ch 00 (D-036) | Ch 03, Ch 06 | AIChatAssistantConfig is the top-level public API | Pending |
 | IMP-017 | Ch 00 (D-037) | Ch 05 | StorageAdapter interface must be satisfied by Phase 1 IndexedDB impl | Pending |
-| IMP-018 | Ch 00 (D-039) | Ch 04 | Backend must implement Vercel AI SDK v7 streaming contract | Pending |
+| IMP-018 | Ch 00 (D-039) | Ch 04 | Backend must implement Vercel AI SDK v7 streaming contract (reinforced) | Pending |
 
 ---
 
@@ -73,7 +73,7 @@
 | 2 | 2026-06-30 | Ch 01 | Scoping + Lock | 8 | D-001 to D-008. LOCKED. |
 | 3 | 2026-06-30 | Ch 02 | Scoping (partial) | 8 | D-009 to D-016. Prematurely locked. |
 | 4 | 2026-06-30 | Ch 02 | Reopen + Complete | 13 | Added D-017 to D-021. Re-locked properly at 13 decisions. |
-| 5 | 2026-06-30 | Ch 00 | Scoping + Lock | 20 | D-022 to D-041. Full pass, locked in one session. |
+| 5 | 2026-07-01 | Ch 00 | Scoping + Lock | 20 | D-022 to D-041. Full pass, locked in one session. |
 
 ---
 
