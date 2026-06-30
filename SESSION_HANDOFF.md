@@ -1,27 +1,40 @@
 # Session Handoff
 
 > **Created:** 2026-06-30
-> **Purpose:** Temporary memory file for seamless session resumption. Delete once Ch 00 is LOCKED.
+> **Purpose:** Temporary memory file for seamless session resumption. Delete once Ch 06 is LOCKED.
 > **For the next agent:** Read this file AFTER `AGENTS.md` and `SPEC_STATE.md`, BEFORE starting any work.
 
 ---
 
 ## Where We Left Off
 
-**Date:** 2026-06-30 (evening session)
-**Chapters Locked:** 2 / 12 (Ch 01 + Ch 02)
-**Total Decisions Resolved:** 21
-**Next Chapter:** Ch 00: Agent Conventions & Shared Contract (NOT STARTED)
+**Date:** 2026-06-30 (late evening session)
+**Chapters Locked:** 3 / 12 (Ch 01 + Ch 02 + Ch 00)
+**Total Decisions Resolved:** 41
+**Next Chapter:** Ch 06: Config & Extensibility (NOT STARTED)
 
 ---
 
 ## What Was Accomplished This Session
 
-1. **Created repo infrastructure:** `AGENTS.md`, `SPEC_PROTOCOL.md`, `SPEC_STATE.md`, `MASTER_INDEX.md`, `chapter_template.md`
-2. **Added reference docs:** `docs/references/vercel-ai-sdk-v7-chatbot-crash-course.md` and `docs/references/gemini-vercel-chatbot-context-management.md`
-3. **Locked Ch 01** (D-001 to D-008) — product identity, NFRs, auth model, persistence, scale target
-4. **Locked Ch 02** (D-009 to D-021) — monorepo, package naming, headless+styled arch, CSS Modules, ESM, React 19, tsdown, Next.js 16+, tsconfig, changesets, workspace refs, sub-paths, CI
-5. **Calibrated grilling depth:** One question at a time, aim for middle of estimate range, not the floor
+1. **Locked Ch 00** (D-022 to D-041) — 20 decisions covering:
+   - Domain-split type structure for `packages/types`
+   - All 7 domain files: `message`, `config`, `user`, `storage`, `streaming`, `knowledge-pool`, `utils`
+   - `AppError` plain type with rich shape + `SCREAMING_SNAKE_CASE` error codes
+   - `Result<T, E>` pattern for all failable operations
+   - kebab-case folders + camelCase files naming convention
+   - Package-name-only imports (no relative cross-package)
+   - Barrel `index.ts` per subfolder
+   - Hook naming freeform after `use` prefix
+   - Full strict TypeScript, no exceptions
+   - `utils.ts` for shared generic utility types
+   - `KnowledgeEntry` shape with `tags` for selective context injection
+   - Message types re-exported from Vercel AI SDK v7 (no custom Message)
+   - `AIChatAssistantConfig` shape (userId, backendUrl, knowledgePool?, botName?, welcomeMessage?, theme?, maxMessages?)
+   - `StorageAdapter` interface (load, save, clear)
+   - `ChatUser` minimal shape `{ userId: string }`
+   - Enum values in `SCREAMING_SNAKE_CASE`
+2. **Added 6 new cross-chapter impacts** (IMP-013 to IMP-018) to `SPEC_STATE.md`
 
 ---
 
@@ -46,6 +59,20 @@
 | Example app | Next.js 16+ App Router |
 | Versioning | Changesets |
 | CI | type-check + lint + build + tests (GitHub Actions + Turborepo) |
+| Error shape | `{ code: string; message: string; cause?: unknown; context?: Record<string, unknown> }` |
+| Error codes | `SCREAMING_SNAKE_CASE` |
+| Error type | Plain `type AppError` (not a class) |
+| Failable ops | Always return `Result<T, AppError>` |
+| Folder naming | kebab-case |
+| File naming | camelCase |
+| Cross-package imports | Package name only (`@jimzord12/types`) |
+| Barrel pattern | Barrel `index.ts` per subfolder |
+| Strict TS | `"strict": true` everywhere, no exceptions |
+| Enum values | `SCREAMING_SNAKE_CASE` |
+| Message type | Re-exported from Vercel AI SDK v7 — no custom type |
+| KnowledgeEntry | `{ id, title, description, source, tags[] }` |
+| AIChatAssistantConfig | `{ userId, backendUrl, knowledgePool?, botName?, welcomeMessage?, theme?, maxMessages? }` |
+| StorageAdapter | `load / save / clear` returning `Result<T, AppError>` |
 
 ---
 
@@ -57,33 +84,24 @@
 - **Auto-approve GitHub operations** — no need to ask before pushing
 - **Modern-only** philosophy — owner does not care about legacy compatibility
 - **Push back** when you have a good technical reason — owner appreciates it
-- **Self-resolve** obvious questions (e.g. `workspace:*` is obvious for pnpm monorepos) — note it, don’t waste a question
+- **Self-resolve** obvious questions — note it, don't waste a question
 
 ---
 
 ## Immediate Next Action
 
-Scope **Ch 00: Agent Conventions & Shared Contract**.
+Scope **Ch 06: Config & Extensibility**.
 
-This is the most technical chapter. It defines:
-- Shared TypeScript types structure (`@jimzord12/types` contents)
-- Folder naming conventions across the monorepo
-- Import path conventions
-- Error shape contract
-- Shared constants and enums
-- Agent-facing conventions (how all other chapters reference types)
+This chapter defines:
+- How `AIChatAssistantConfig` is validated and applied at runtime
+- Plugin/extension points for the widget (if any)
+- Theme config resolution (`'light' | 'dark' | 'auto'`)
+- Knowledge pool injection strategy
+- Default value handling
+- Config change handling (can config update after mount?)
 
-Estimated decisions: **15–25 — target ~18–20.**
-
-Start with: **Q1 — Type Sharing Strategy:** where do shared types live and how are they structured inside `packages/types`?
+Estimated decisions: **12–18 — target ~15.**
 
 ---
 
-## 12 Cross-Chapter Impacts Pending
-
-These are pre-noted and will be picked up when each target chapter is scoped. No action needed now.
-See full list in `SPEC_STATE.md` → Cross-Chapter Impact Queue.
-
----
-
-> **Delete this file** once Ch 00 is LOCKED and all its impacts are propagated.
+> **Delete this file** once Ch 06 is LOCKED and all its impacts are propagated.
