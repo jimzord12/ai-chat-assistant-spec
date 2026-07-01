@@ -8,5 +8,6 @@ These files are **read-only references** — do not modify them. If an SDK updat
 
 | File | SDK / Topic | Version | Relevant Chapters |
 |------|------------|---------|-------------------|
-| [`vercel-ai-sdk-v7-chatbot-crash-course.md`](./vercel-ai-sdk-v7-chatbot-crash-course.md) | Vercel AI SDK | v7 | Ch 03, Ch 04 |
-| [`gemini-vercel-chatbot-context-management.md`](./gemini-vercel-chatbot-context-management.md) | Gemini + Vercel AI SDK v7 — Context Management (no RAG) | v7 / Gemini 3.1 | Ch 04, Ch 08 |
+| [`vercel-ai-sdk-v7-chatbot-crash-course.md`](./vercel-ai-sdk-v7-chatbot-crash-course.md) | Vercel AI SDK — core patterns | v7 | Ch 03, Ch 04 |
+| [`gemini-vercel-chatbot-context-management.md`](./gemini-vercel-chatbot-context-management.md) | Gemini + Vercel AI SDK v7 — context management (no RAG) | v7 / Gemini 3.1 | Ch 04, Ch 08 |
+| [`browser-aware-ai-assistant-v2.md`](./browser-aware-ai-assistant-v2.md) | assistant-ui + Vercel AI SDK — Browser Agent & Tool Calling | v6+ / assistant-ui | Ch 03 |
